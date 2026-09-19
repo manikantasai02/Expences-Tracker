@@ -83,14 +83,25 @@ py backend/test_backend.py
 
 ## 🚢 Deployment Guide
 
-### 1. Local Deployment (Active Now)
-The application is currently deployed and running locally in the background on:
+### 1. 🌐 Live Public Cloud Deployment (Active Now)
+Your application is currently deployed and accessible globally over the public internet:
+👉 **[https://knowledge-vendors-covers-hughes.trycloudflare.com](https://knowledge-vendors-covers-hughes.trycloudflare.com)**
+
+- **SSL/HTTPS**: Enabled & secured with Cloudflare TLS
+- **Global Access**: Accessible from any phone, laptop, or browser anywhere
+- **Launcher**: You can restart the public tunnel at any time by running:
+  ```powershell
+  py deploy_live.py
+  ```
+
+### 2. 💻 Local Deployment
+The application is also accessible locally on:
 👉 **[http://localhost:5000](http://localhost:5000)**
 
-To run silently without a console window at any time:
+To run silently in the background without a CMD window:
 - Double-click [`run_background.vbs`](file:///c:/OneDrive/Documents/sai/ExpencesTracker/run_background.vbs).
 
-### 2. Docker Deployment
+### 3. Docker Deployment
 A [`Dockerfile`](file:///c:/OneDrive/Documents/sai/ExpencesTracker/Dockerfile) and [`docker-compose.yml`](file:///c:/OneDrive/Documents/sai/ExpencesTracker/docker-compose.yml) are provided.
 
 To build and run in Docker:
