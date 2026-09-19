@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  expense-tracker:
+    build: .
+    container_name: expense-tracker-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - expense_data:/app/backend
+    restart: unless-stopped
+
+volumes:
+  expense_data:
