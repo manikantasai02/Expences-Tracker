@@ -1,10 +1,9 @@
 services:
   - type: web
     name: expenses-tracker
-    env: python
+    env: docker
     plan: free
-    buildCommand: "echo 'No build step required -- stdlib only'"
-    startCommand: "python backend/server.py"
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: RENDER
         value: "true"
