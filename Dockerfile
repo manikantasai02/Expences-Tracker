@@ -14,5 +14,5 @@ ENV PORT=5000
 # Expose port
 EXPOSE 5000
 
-# Run the server
-CMD ["python", "backend/server.py", "5000"]
+# Run the server (reads PORT from environment variable injected by Render)
+CMD ["python", "backend/server.py"]
