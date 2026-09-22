@@ -15,7 +15,12 @@ CATEGORIES = [
     "Travelling"
 ]
 
-DB_DIR = os.path.dirname(os.path.abspath(__file__))
+# On Render, the app directory is read-only; use /tmp which is writable.
+# Locally, store the DB next to db.py for convenience.
+if os.environ.get("RENDER"):
+    DB_DIR = "/tmp"
+else:
+    DB_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(DB_DIR, "expenses.db")
 
 @contextmanager
